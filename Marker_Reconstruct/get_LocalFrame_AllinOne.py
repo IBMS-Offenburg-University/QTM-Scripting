@@ -1,8 +1,23 @@
 import qtm
 import numpy as np
 
+# Script used to calculate the technical frame of the segment spanned by 3 Markers
+# from a static trial (the static trial must be selected when running this script). 
+# Script defines the marker that will be reconstructed (MR) in the in the dynamic trial.
+# The 3 markers that define the segment (marker1, marker2, marker3) as well as 
+# the missing marker (MR) need to be defined before running the script.
+
+
+
 def calculate_frame(marker1, marker2, marker3):
-    
+# This function calculates the rotational matrix of the chosen segment 
+# relative to the global coordinate system. marker1, marker2, and marker 3,
+# are the position vectors (3 x 1 x n) of the chosen markers in the global
+# coordinate system at Frame n.
+# The origin (O_frame) of the segment is set at the center of the 3 chosen markers.
+# The function return the origin (O_frame), the rotational matrix (R_frame) and the
+# total number of frames in the static trial (y).
+       
     M1 = []
     M2 = []
     M3 = []
@@ -60,6 +75,9 @@ marker2 = qtm.data.series._3d.get_samples(id2)
 marker3 = qtm.data.series._3d.get_samples(id3)
 Oframe, Rframe,frames = calculate_frame(marker1,marker2,marker3)
 
+
+# calculate the location of the marker that will be reconstructed
+# in the local segment (MRlokal).
 idMR = qtm.data.object.trajectory.find_trajectory(MRlabel)
 marker = qtm.data.series._3d.get_samples(idMR)
 MR = []
@@ -79,5 +97,6 @@ MRlokal = np.zeros((3,frames))
 for i in range(frames):
     MRlokal[0:3,i] = np.dot(np.transpose(Rframe[0:3,0:3,i]),(MR[0:3,i] - Oframe[0:3,i]))
 
+# calculate average postion troughout the static trial
 MRlokalmean = np.mean(MRlokal, axis=1)
-
+print("Local frame defined and saved.")
