@@ -50,14 +50,10 @@ Arel.append({
         "cluster_femur_left_2":("cluster_femur_left_4","cluster_femur_left_3","cluster_femur_left_1"),
         "cluster_femur_left_3":("cluster_femur_left_2","cluster_femur_left_1","cluster_femur_left_4"),
         "cluster_femur_left_4":("cluster_femur_left_2","cluster_femur_left_1","cluster_femur_left_3"),
-        "epi_lat_left":("cluster_femur_left_4","cluster_femur_left_3","epi_med_left"),
-        "epi_med_left":("cluster_femur_left_4","cluster_femur_left_3","epi_lat_left"),
         "cluster_tibia_left_1":("cluster_tibia_left_4","cluster_tibia_left_3","cluster_tibia_left_2"),
         "cluster_tibia_left_2":("cluster_tibia_left_4","cluster_tibia_left_3","cluster_tibia_left_1"),
         "cluster_tibia_left_3":("cluster_tibia_left_2","cluster_tibia_left_1","cluster_tibia_left_4"),
         "cluster_tibia_left_4":("cluster_tibia_left_2","cluster_tibia_left_1","cluster_tibia_left_3"),
-        "mal_lat_left":("calc_lat_left","forefoot_lat_left","mal_med_left"),
-        "mal_med_left":("calc_med_left","forefoot_med_left","mal_lat_left"),
 
         # Distance between left foot markers is not constant
             # Use with caution
@@ -74,16 +70,12 @@ Arel.append({
         "cluster_femur_right_2":("cluster_femur_right_4","cluster_femur_right_3","cluster_femur_right_1"),
         "cluster_femur_right_3":("cluster_femur_right_2","cluster_femur_right_1","cluster_femur_right_4"),
         "cluster_femur_right_4":("cluster_femur_right_2","cluster_femur_right_1","cluster_femur_right_3"),
-        "epi_lat_right":("cluster_femur_right_4","cluster_femur_right_3","epi_med_right"),
-        "epi_med_right":("cluster_femur_right_4","cluster_femur_right_3","epi_lat_right"),
         "cluster_tibia_right_1":("cluster_tibia_right_4","cluster_tibia_right_3","cluster_tibia_right_2"),
         "cluster_tibia_right_2":("cluster_tibia_right_4","cluster_tibia_right_3","cluster_tibia_right_2"),
         "cluster_tibia_right_3":("cluster_tibia_right_2","cluster_tibia_right_1","cluster_tibia_right_4"),
         "cluster_tibia_right_4":("cluster_tibia_right_2","cluster_tibia_right_1","cluster_tibia_right_3"),
-        "mal_lat_right":("calc_lat_right","forefoot_lat_right","mal_med_right"),
-        "mal_med_right":("calc_med_right","forefoot_med_right","mal_lat_right"),
 
-        # Distance between left foot markers is not constant
+        # Distance between right foot markers is not constant
             # Use with caution
         # Right Foot
         #"calc_back_right":("calc_lat_right","forefoot_lat_right","calc_med_right"),
@@ -108,14 +100,10 @@ Arel.append({
         "cluster_femur_left_2":("cluster_femur_left_4","cluster_femur_left_1","cluster_femur_left_3"),
         "cluster_femur_left_3":("cluster_femur_left_4","cluster_femur_left_1","cluster_femur_left_2"),
         "cluster_femur_left_4":("cluster_femur_left_2","cluster_femur_left_1","cluster_femur_left_3"),
-        "epi_lat_left":("cluster_tibia_left_1","cluster_femur_left_3","epi_med_left"),
-        "epi_med_left":("cluster_tibia_left_1","cluster_femur_left_3","epi_lat_left"),
         "cluster_tibia_left_1":("cluster_tibia_left_2","cluster_tibia_left_3","cluster_tibia_left_4"),
         "cluster_tibia_left_2":("cluster_tibia_left_4","cluster_tibia_left_1","cluster_tibia_left_3"),
         "cluster_tibia_left_3":("cluster_tibia_left_4","cluster_tibia_left_1","cluster_tibia_left_2"),
         "cluster_tibia_left_4":("cluster_tibia_left_2","cluster_tibia_left_3","cluster_tibia_left_1"),
-        "mal_lat_left":("cluster_tibia_left_4","cluster_tibia_left_3","mal_med_left"),
-        "mal_med_left":("cluster_tibia_left_4","cluster_tibia_left_3","mal_lat_left"),
 
 
         # Right Leg
@@ -123,14 +111,10 @@ Arel.append({
         "cluster_femur_right_2":("cluster_femur_right_4","cluster_femur_right_1","cluster_femur_right_3"),
         "cluster_femur_right_3":("cluster_femur_right_4","cluster_femur_right_1","cluster_femur_right_2"),
         "cluster_femur_right_4":("cluster_femur_right_2","cluster_femur_right_1","cluster_femur_right_3"),
-        "epi_lat_right":("cluster_tibia_right_1","cluster_femur_right_3","epi_med_right"),
-        "epi_med_right":("cluster_tibia_right_1","cluster_femur_right_3","epi_lat_right"),
         "cluster_tibia_right_1":("cluster_tibia_right_2","cluster_tibia_right_3","cluster_tibia_right_4"),
         "cluster_tibia_right_2":("cluster_tibia_right_4","cluster_tibia_right_1","cluster_tibia_right_3"),
         "cluster_tibia_right_3":("cluster_tibia_right_4","cluster_tibia_right_1","cluster_tibia_right_2"),
         "cluster_tibia_right_4":("cluster_tibia_right_2","cluster_tibia_right_3","cluster_tibia_right_1"),
-        "mal_lat_right":("cluster_tibia_right_4","cluster_tibia_right_3","mal_med_right"),
-        "mal_med_right":("cluster_tibia_right_4","cluster_tibia_right_3","mal_lat_right"),
         })
 
 
